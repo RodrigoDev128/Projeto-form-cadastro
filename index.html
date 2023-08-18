@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Form</title>
+    <link rel="stylesheet" href="/estilo/style.css">
+    <link rel="stylesheet" href="/estilo/mq.css">
+</head>
+<body>
+    <main class="main">
+
+        <form action="submit" class="form">
+            <h1>CADASTRO</h1>
+            <div class="row1">
+                
+                <div class="cnpj-box">
+                    <label for="cnpj">cnpj</label>
+                    <input type="text" name="cnpj" id="cnpj" class="cnpj" placeholder="00.000.000/0000-00">
+                    <p class="erro">cnpj inválido</p>
+                </div>
+                
+                <div class="razao-social-box">
+                    <label for="razao-social">razão-social</label>
+                    <input type="text" name="razao-social" id="razaosocial" class="">
+                    <p class="erro">tamanho máximo de 30 caracteres.</p>
+                </div>
+            
+            </div>
+
+            <div class="row2">
+
+                <div class="cpf-box">
+                    <label for="cpf">cpf do representante legal</label>
+                    <input type="text" name="cpf" id="cpf" class="cpf">
+                    <p class="erro">cpf invalido</p>
+                </div>
+
+                <div class="nome-box">
+                    <label for="nome">nome do representante legal</label>
+                    <input type="text" name="nome" id="nome" class="nome">
+                    <p class="erro">tamanho máximo de 20 caracteres.</p>
+                </div>
+            
+                <div class="saudacao-box">
+                    <label for="saudacao">como deseja ser chamado?</label>
+                    <input type="text" name="saudacao" id="saudacao">
+                    <p class="erro">tamanho máximo de 10 caracteres</p>
+                </div>
+            
+            </div>
+            <div class="row3">
+                <div class="qdtfun-box">
+                    <label for="qdt-fun">quantidade de funcionario</label>
+                    <input type="text" name="qdt-fun" id="qdt-fun" class="qdtfun">
+                    <p class="erro">campo obrigatório.</p>
+                </div>
+                <div class="fatu-box">
+                    <label for="fatu">faturamento anual</label>
+                    <input type="text" name="fatu" id="fatu" class="fatu">
+                    <p class="erro">campo obrigatório.</p>
+                </div>
+            </div>
+
+
+
+
+            <button type="submit" class="btn">abrir conta pj</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script> 
+    $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+    $('.cpf').mask('000.000.000-00', {reverse: true});
+    $('.qdtfun').mask('000.000.000.000.000', {reverse: true});
+    $('.fatu').mask("#.##0,00", {reverse: true});
+
+    </script>
+
+</body>
+</html>
