@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Form</title>
-    <link rel="stylesheet" href="/estilo/style.css">
-    <link rel="stylesheet" href="/estilo/mq.css">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/mq.css">
 </head>
 <body>
     <main class="main">
@@ -22,7 +22,7 @@
                 
                 <div class="razao-social-box">
                     <label for="razao-social">razão-social</label>
-                    <input type="text" name="razao-social" id="razaosocial" class="">
+                    <input type="text" name="razao-social" id="razaosocial" class="" maxlength="30">
                     <p class="erro">tamanho máximo de 30 caracteres.</p>
                 </div>
             
@@ -32,19 +32,19 @@
 
                 <div class="cpf-box">
                     <label for="cpf">cpf do representante legal</label>
-                    <input type="text" name="cpf" id="cpf" class="cpf">
+                    <input type="text" name="cpf" id="cpf" class="cpf" placeholder="000.000.000-00">
                     <p class="erro">cpf invalido</p>
                 </div>
 
                 <div class="nome-box">
                     <label for="nome">nome do representante legal</label>
-                    <input type="text" name="nome" id="nome" class="nome">
+                    <input type="text" name="nome" id="nome" class="nome" maxlength="20">
                     <p class="erro">tamanho máximo de 20 caracteres.</p>
                 </div>
             
                 <div class="saudacao-box">
                     <label for="saudacao">como deseja ser chamado?</label>
-                    <input type="text" name="saudacao" id="saudacao">
+                    <input type="text" name="saudacao" id="saudacao" maxlength="10">
                     <p class="erro">tamanho máximo de 10 caracteres</p>
                 </div>
             
@@ -52,12 +52,12 @@
             <div class="row3">
                 <div class="qdtfun-box">
                     <label for="qdt-fun">quantidade de funcionario</label>
-                    <input type="text" name="qdt-fun" id="qdt-fun" class="qdtfun">
+                    <input type="text" name="qdt-fun" id="qdt-fun" class="qdtfun" placeholder="EX: 1.000">
                     <p class="erro">campo obrigatório.</p>
                 </div>
                 <div class="fatu-box">
                     <label for="fatu">faturamento anual</label>
-                    <input type="text" name="fatu" id="fatu" class="fatu">
+                    <input type="text" name="fatu" id="fatu" class="fatu" placeholder="120.000,00">
                     <p class="erro">campo obrigatório.</p>
                 </div>
             </div>
@@ -74,6 +74,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script> 
     $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+    $('.razaosocial').mask('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     $('.cpf').mask('000.000.000-00', {reverse: true});
     $('.qdtfun').mask('000.000.000.000.000', {reverse: true});
     $('.fatu').mask("#.##0,00", {reverse: true});

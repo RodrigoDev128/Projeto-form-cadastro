@@ -14,6 +14,11 @@ const fatu = document.querySelector('#fatu')
 
 
 
+
+
+
+
+
 // VALIDAÇÕES
 const validateinputcnpj = () => {
     if(!cnpj.value) {

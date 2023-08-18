@@ -17,7 +17,7 @@ main {
     width: 70%;
     height: 60%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 20px;
     border-radius: 8px;
 
     
@@ -98,8 +98,8 @@ p {
 /* SEGUNDA LINHA */
 .row2 {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
 }
 .cpf-box {
     display: flex;
