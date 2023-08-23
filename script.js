@@ -12,19 +12,13 @@ const fatu = document.querySelector('#fatu')
 
 const btn = document.querySelector('#btn')
 const input = document.querySelectorAll('form', '#cnpj', '#razaosocial', '#cpf', '#nome', '#saudacao', '#qdt-fun', '#fatu')
-console.log(btn)
-console.log(input)
+
 
 
 
 btn.disabled = true
 
-const btncheck = () => {
-    if (!input.value) {
-    } else {
-        btn.disabled = false
-    }
-}
+
 
 
 
