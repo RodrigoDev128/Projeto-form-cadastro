@@ -10,6 +10,23 @@ const saudacao = document.querySelector('#saudacao')
 const qdtfun = document.querySelector('#qdt-fun')
 const fatu = document.querySelector('#fatu')
 
+const btn = document.querySelector('#btn')
+const input = document.querySelectorAll('form', '#cnpj', '#razaosocial', '#cpf', '#nome', '#saudacao', '#qdt-fun', '#fatu')
+console.log(btn)
+console.log(input)
+
+
+
+btn.disabled = true
+
+const btncheck = () => {
+    if (!input.value) {
+    } else {
+        btn.disabled = false
+    }
+}
+
+
 
 
 
@@ -91,38 +108,50 @@ const validateinputfatu = () => {
 cnpj.addEventListener ('input', ()=> {
     cnpj.classList.remove('invalid')
     cnpj.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 razaosocial.addEventListener('input', () => {
     razaosocial.classList.remove('invalid')
     razaosocial.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 cpf.addEventListener('input', () => {
     cpf.classList.remove('invalid')
     cpf.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 nome.addEventListener('input', () => {
     nome.classList.remove('invalid')
     nome.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 saudacao.addEventListener('input', () => {
     saudacao.classList.remove('invalid')
     saudacao.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 qdtfun.addEventListener('input', () => {
     qdtfun.classList.remove('invalid')
     qdtfun.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
 fatu.addEventListener('input', () => {
     fatu.classList.remove('invalid')
     fatu.nextElementSibling.classList.add('erro')
+    btn.disabled = false
 })
 
+
+
+
+
+//submit
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     validateinputcnpj()

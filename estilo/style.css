@@ -51,6 +51,14 @@ h1 {
     cursor: pointer;
 }
 
+.btn:disabled {
+    align-self: center;
+    padding: 10px 50px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
 input {
     border: none;
     background-color: rgb(240, 240, 240);
