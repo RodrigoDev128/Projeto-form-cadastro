@@ -32,12 +32,7 @@ const input = document.querySelectorAll('form', '#cnpj', '#razaosocial', '#cpf',
 
 btn.disabled = true
 
-const btncheck = () => {
-    if (!input.value) {
-    } else {
-        btn.disabled = false
-    }
-}
+
 
 /* parte que maneja os dados inseridos 
 anteriormente quando você volta para corrigir algum dado*/
