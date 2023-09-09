@@ -15,6 +15,11 @@ const saudacao = document.querySelector('#saudacao')
 const qdtfun = document.querySelector('#qdt-fun')
 const fatu = document.querySelector('#fatu')
 
+//regex
+const validcpf = RegExp(/[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}/gi)
+const validcnpj = RegExp(/[0-9]{2}\.[0-9]{3}\.[0-9]{3}[/][0-9]{4}\-[0-9]{2}/gi)
+
+
 let cnpjv = cnpj.value
 let rzv = razaosocial.value
 let cpfv = cpf.value 
@@ -63,7 +68,8 @@ fatuv = fatu.value
 
 // VALIDAÇÕES
 const validateinputcnpj = () => {
-    if(!cnpj.value) {
+    let validacaocnpj = cnpjv.match(validcnpj)
+    if(!cnpj.value||validacaocnpj === null) {
         cnpj.classList.add('invalid')
         cnpj.nextElementSibling.classList.remove('erro')
 
@@ -82,13 +88,16 @@ const validateinputrazaosocial = () => {
 }
 
 const validateinputcpf = () => {
-    if(!cpf.value) {
+    let validacaocpf = cpfv.match(validcpf)
+    if(!cpf.value || validacaocpf === null) {
         cpf.classList.add('invalid')
         cpf.nextElementSibling.classList.remove('erro')
     }else {
         return true
     }
 }
+
+
 
 const validateinputnome = () => {
     if(!nome.value) {
@@ -215,7 +224,7 @@ form.addEventListener("submit", (e) => {
    localStorage.setItem('sau',saudacaov)
    localStorage.setItem('qdt',qdtfunv)
    localStorage.setItem('fatu',fatuv)
-   
+  
    if (valcnpj & valrz & valcpf & valn & valsau & valqdtfun & valfatu == true) {
        window.location.href = form.action = 'index2.html'
    }  
